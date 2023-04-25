@@ -2,12 +2,12 @@
 
 # Check if xray is installed
 if ! [ -x "$(command -v xray)" ]; then
-    echo "Xray is not installed. Installing..."
-    curl -L https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-$(arch).zip -o xray.zip
-    unzip xray.zip && rm xray.zip
-    chmod +x xray
-    mv xray /usr/local/bin/
-    echo "Xray installed successfully!"
+    print_ok "Installing Xray"
+    curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh | bash -s -- install
+    judge "Xray Installation"
+
+    groupadd nobody
+    gpasswd -a nobody nobody
 fi
 
 # Copy config.json
