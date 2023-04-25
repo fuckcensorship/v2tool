@@ -13,9 +13,8 @@ fi
 # Copy config.json
 if ! [ -f "/usr/local/etc/xray/config.json" ]; then
     echo "Copying config.json to /usr/local/etc/xray/..."
-    curl -LJO https://github.com/fuckcensorship/v2tool/raw/main/xray/ws.json
     mkdir -p /usr/local/etc/xray/
-    cp -i ./config.json /usr/local/etc/xray/
+    cp -i ~/v2tool/xray/ws.json /usr/local/etc/xray/config.json
     echo "config.json copied successfully!"
 fi
 
