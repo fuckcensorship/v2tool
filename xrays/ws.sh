@@ -11,12 +11,11 @@ if ! [ -x "$(command -v xray)" ]; then
 fi
 
 # Copy config.json
-if ! [ -f "/usr/local/etc/xray/config.json" ]; then
-    echo "Copying config.json to /usr/local/etc/xray/..."
-    mkdir -p /usr/local/etc/xray/
-    cp ~/v2tool/xrays/ws.json /usr/local/etc/xray/config.json
-    echo "config.json copied successfully!"
-fi
+echo "Copying config.json to /usr/local/etc/xray/..."
+#mkdir -p /usr/local/etc/xray/
+cp ~/v2tool/xrays/ws.json /usr/local/etc/xray/config.json
+echo "config.json copied successfully!"
+
 
 # Restart Xray service
 echo "Restarting Xray service..."
