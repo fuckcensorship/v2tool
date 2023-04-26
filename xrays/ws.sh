@@ -14,7 +14,7 @@ fi
 if ! [ -f "/usr/local/etc/xray/config.json" ]; then
     echo "Copying config.json to /usr/local/etc/xray/..."
     mkdir -p /usr/local/etc/xray/
-    cp -i ~/v2tool/xrays/ws.json /usr/local/etc/xray/config.json
+    cp ~/v2tool/xrays/ws.json /usr/local/etc/xray/config.json
     echo "config.json copied successfully!"
 fi
 
