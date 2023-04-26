@@ -4,7 +4,7 @@
 if ! [ -x "$(command -v xray)" ]; then
     print_ok "Installing Xray"
     curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh | bash -s -- install
-    judge "Xray Installation"
+    echo "Xray Installation"
 
     groupadd nobody
     gpasswd -a nobody nobody
